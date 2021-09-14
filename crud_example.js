@@ -7,12 +7,12 @@ const knex = require('knex')({
       password : 'Sudha@123',
       database : 'sudhakumari'
     }
-  });
+});
 
 // we are inserting the data in the table
-knex('user').insert({ id: 8, first_name: 'shanti', last_name: 'kumari' })
+knex('user').insert({ id: 4, first_name: 'seema', last_name: 'kumari' })
 .then((data)=>{
-    console.log(data);
+    console.log("insert data");
 }).catch((err)=>{
     console.log(err)
 })
@@ -34,7 +34,7 @@ knex.update({id:10,first_name: 'anchal', last_name: 'prasad'})
 })
 
 // delete the data from table
-knex('user').where('id',9).del().then((data)=>{
+knex('user').where('id',3).del().then((data)=>{
     // console.log("delete")
 }).catch((err)=>{
     // console.log(err)
